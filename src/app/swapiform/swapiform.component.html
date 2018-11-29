@@ -1,0 +1,11 @@
+<div>
+  <form>
+    <select name="dropdown" [(ngModel)]="dropdown" class="form-control" id="dropdown">
+      <option value="people">people</option>
+      <option value="ships">ships</option>
+      <option value="films">films</option>
+    </select>
+    <input type="text"  id="newSearch" required [(ngModel)]="newSearch" name="newSearch">
+    <button type="button" (click)="findData(dropdown, newSearch)">GOGOGOGO!</button>
+  </form>
+</div>
