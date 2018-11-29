@@ -1,11 +1,25 @@
 <div>
+    <p>Select from dropdown, then enter a search string. </p>
   <form>
     <select name="dropdown" [(ngModel)]="dropdown" class="form-control" id="dropdown">
-      <option value="people">people</option>
-      <option value="ships">ships</option>
+          <option value="people" >people</option>
+      <option value="starships">starships</option>
       <option value="films">films</option>
     </select>
-    <input type="text"  id="newSearch" required [(ngModel)]="newSearch" name="newSearch">
-    <button type="button" (click)="findData(dropdown, newSearch)">GOGOGOGO!</button>
+    <input type="text"  id="newSearch" [(ngModel)]="newSearch" name="newSearch">
+    <button type="button" (click)="findData(dropdown, newSearch)">ENGAGE!!!</button>
   </form>
+
+<br />
+<br />
+
+<button (click)="onClickMe()">Click here for the truth</button>
+{{clickMessage}}
+<br />
+<button (click)="onClickMe2()">Want more truth?</button>
+{{clickMessage2}}
 </div>
+{{ results.results | json }}
+
+
+
